@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awish Innovations | Automating Patient Transfers</title>
+    
+    <!-- Fonts: Inter for Crisp, Medical Precision -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- GSAP Core & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Premium Corporate Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <i class="ph-fill ph-infinity"></i> AWISH
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#technology">Technology</a>
+                <a href="#clinical">Clinical Impact</a>
+                <a href="#company">Company</a>
+                <a href="#investors">Investors</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-outline">Partner Portal</a>
+                <a href="#contact" class="btn btn-primary">Request Demo</a>
+                <button class="mobile-toggle"><i class="ph ph-list"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: Cinematic Video Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <!-- Background Video (Forced to load without poster) -->
+            <video autoplay loop muted playsinline class="hero-bg-media">
+                <source src="assets/bgvideo.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text-wrapper gs-reveal-up">
+                <div class="badge-tech"><span class="pulse-dot"></span> Next-Generation Healthcare Robotics</div>
+                <h1 class="hero-title">REDEFINING<br>PATIENT<br>TRANSFERS.</h1>
+                <p class="hero-subtitle">Protecting the people who care for us through practical, intelligent healthcare automation.</p>
+                <div class="hero-cta-group">
+                    <a href="#technology" class="btn btn-primary btn-large">Explore The Technology</a>
+                    <a href="#video-demos" class="btn-text-play"><i class="ph-fill ph-play-circle"></i> Watch Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: GSAP Scrubbing "3D" Comparison -->
+    <section class="comparison-scrub" id="technology">
+        <div class="container">
+            <div class="compare-header gs-reveal-up text-center" style="margin-bottom: 2rem;">
+                <h2 class="section-title">A Better Way to Transfer.</h2>
+                <p class="lead-text">Watch the difference Awish Assist makes on the frontline.</p>
+            </div>
+        </div>
+        
+        <div class="scrub-container">
+            <!-- The device image that scales and moves dynamically -->
+            <div class="scrub-device">
+                <img src="assets/device_transparent.jpg" alt="Awish Assist Device">
+                <div class="glow-orb"></div>
+            </div>
+            
+            <div class="scrub-content">
+                <!-- Data Block 1: The Old Way (Manual) -->
+                <div class="scrub-panel" id="panel-manual">
+                    <div class="panel-card danger-card">
+                        <div class="card-badge badge-danger" style="margin-bottom: 1rem;">MANUAL TRANSFER</div>
+                        <div class="panel-card-inner">
+                            <div class="visual-block">
+                                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2000&auto=format&fit=crop" alt="Caregiver Strain">
+                            </div>
+                            <div class="panel-text-block">
+                                <h3>High Clinical Risk</h3>
+                                <p>100% of lateral transfers require extreme physical exertion. This leads to severe repetitive strain injuries for nurses and discomfort for patients.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Data Block 2: The New Way (Awish) -->
+                <div class="scrub-panel" id="panel-awish">
+                    <div class="panel-card success-card">
+                        <div class="card-badge badge-success" style="margin-bottom: 1rem;">AWISH ASSIST</div>
+                        <div class="panel-card-inner">
+                            <div class="visual-block">
+                                <img src="https://media.giphy.com/media/l41lWyT3O6K7U0KzC/giphy.gif" alt="Device Animation Placeholder">
+                            </div>
+                            <div class="panel-text-block">
+                                <h3>Automated & Safe</h3>
+                                <p>A single caregiver initiates a smooth, controlled transfer with the push of a button. No physical pulling required.</p>
+                                <ul class="clean-list">
+                                    <li><i class="ph-bold ph-check"></i> Zero physical exertion</li>
+                                    <li><i class="ph-bold ph-check"></i> 1 Caregiver operation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: High-End Visual Features Grid -->
+    <section class="features-section" id="clinical">
+        <div class="container">
+            <h2 class="section-title text-center gs-reveal-up" style="margin-bottom: 4rem;">Engineered for the Frontline.</h2>
+            
+            <div class="feature-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card gs-reveal-up">
+                    <div class="feature-visual">
+                        <img src="assets/hero_bg_clean.jpg" alt="Hospital Room">
+                        <div class="icon-overlay"><i class="ph ph-buildings"></i></div>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Universal Compatibility</h3>
+                        <p>Works with existing hospital beds and infrastructure. No renovations required.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card gs-reveal-up" style="transition-delay: 0.1s;">
+                    <div class="feature-visual">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop" alt="Portable Device">
+                        <div class="icon-overlay"><i class="ph ph-battery-charging"></i></div>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Portable & Wireless</h3>
+                        <p>Move seamlessly through hospital corridors without being tethered to a wall outlet.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card gs-reveal-up" style="transition-delay: 0.2s;">
+                    <div class="feature-visual">
+                        <!-- Medical GIF Placeholder -->
+                        <img src="https://media.giphy.com/media/26n7bB5RRoXWbb3i0/giphy.gif" alt="One Button Operation">
+                        <div class="icon-overlay"><i class="ph ph-hand-tap"></i></div>
+                    </div>
+                    <div class="feature-text">
+                        <h3>One-Button Operation</h3>
+                        <p>Intuitive interface automatically completes the transfer and stops safely.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Video Demos (Highly Visual) -->
+    <section class="video-demos" id="video-demos">
+        <div class="container">
+            <div class="section-header text-center gs-reveal-up">
+                <h2 class="section-title">See It In Action</h2>
+                <p class="lead-text">Watch how Awish Assist integrates seamlessly into hospital workflows.</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card gs-reveal-up">
+                    <div class="video-thumbnail">
+                        <!-- Medical GIF Background for Video Placeholder -->
+                        <img src="https://media.giphy.com/media/l41m3pCCdMLTNky4M/giphy.gif" alt="Medical Transfer Demo">
+                        <div class="play-btn-large"><i class="ph-fill ph-play"></i></div>
+                        <div class="video-overlay-dark"></div>
+                    </div>
+                    <h3>Full Lateral Transfer Demo</h3>
+                </div>
+                
+                <div class="video-card gs-reveal-up" style="transition-delay: 0.2s;">
+                    <div class="video-thumbnail">
+                        <img src="https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif" alt="Medical Device Setup">
+                        <div class="play-btn-large"><i class="ph-fill ph-play"></i></div>
+                        <div class="video-overlay-dark"></div>
+                    </div>
+                    <h3>Device Setup & Portability</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Clinical Story & Traction -->
+    <section class="company-section" id="company">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-text gs-reveal-left">
+                    <h2 class="section-title">Built by Those Who Understand.</h2>
+                    <p class="lead-text" style="margin-bottom: 2rem;">Awish Innovations bridges the gap between frontline reality and engineering capability.</p>
+                    
+                    <div class="founder-block">
+                        <div class="fb-icon"><i class="ph-fill ph-ambulance"></i></div>
+                        <div>
+                            <h4>The Paramedic's Reality</h4>
+                            <p>Awad experienced the physical toll of transfers firsthand, leading to repetitive injuries that affected daily life.</p>
+                        </div>
+                    </div>
+                    <div class="founder-block">
+                        <div class="fb-icon"><i class="ph-fill ph-gear"></i></div>
+                        <div>
+                            <h4>The Engineering Solution</h4>
+                            <p>Hisham engineered a solution to a problem healthcare professionals had accepted for decades.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="split-visual gs-reveal-right" id="investors">
+                    <div class="traction-box">
+                        <h3>Our Progress</h3>
+                        <div class="t-list">
+                            <div class="t-item"><i class="ph-fill ph-check-circle text-teal"></i> Patent Pending Technology</div>
+                            <div class="t-item"><i class="ph-fill ph-check-circle text-teal"></i> Full-Scale MVP Developed</div>
+                            <div class="t-item"><i class="ph-fill ph-check-circle text-teal"></i> Validated by Frontline Nurses</div>
+                            <div class="t-item"><i class="ph-fill ph-check-circle text-teal"></i> Successful Human Demonstrations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Partner Portal -->
+    <section class="partner-portal" id="contact">
+        <div class="container">
+            <div class="portal-card gs-reveal-up">
+                <div class="portal-info">
+                    <h2 class="massive-title">Partner<br>With Us.</h2>
+                    <p class="lead-text">Join us in bringing Awish Assist to the global market.</p>
+                    <ul class="clean-list" style="margin-top: 2rem;">
+                        <li><i class="ph-bold ph-arrow-right"></i> Seeking Hospital Pilot Programs</li>
+                        <li><i class="ph-bold ph-arrow-right"></i> Open to Strategic Investment</li>
+                    </ul>
+                </div>
+                
+                <div class="portal-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label>Work Email</label>
+                                <input type="email" name="email" required placeholder="name@hospital.org">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Inquiry Type</label>
+                            <select name="interest" required>
+                                <option value="" disabled selected>Select an option...</option>
+                                <option value="Pilot">Pilot Program</option>
+                                <option value="Investment">Investment</option>
+                                <option value="Demo">Request Demo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" required placeholder="How can we collaborate?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" id="submitBtn">Submit Inquiry</button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Massive Corporate Footer (Restored from V4) -->
+    <footer class="corp-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <i class="ph-fill ph-infinity"></i> AWISH
+                    </div>
+                    <p style="color: rgba(255,255,255,0.6); max-width: 300px;">Developing meaningful technologies that solve overlooked challenges in healthcare.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Technology</h4>
+                    <a href="#technology">Awish Assist</a>
+                    <a href="#video-demos">See it in Action</a>
+                    <a href="#clinical">Clinical Evidence</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#company">Our Story</a>
+                    <a href="#investors">Progress</a>
+                    <a href="#contact">Partner Portal</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="mailto:info@awishinnovations.com">info@awishinnovations.com</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Awish Innovations Inc. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
