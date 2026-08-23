@@ -12,6 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Mobile Menu Toggle ---
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+        });
+    }
+
     // --- Basic Reveals ---
     const revealUp = document.querySelectorAll('.gs-reveal-up');
     revealUp.forEach(el => {
