@@ -70,15 +70,32 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerText = 'Sending...';
             submitBtn.disabled = true;
 
-            // Simulate network request
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Show success state
-            contactForm.reset();
-            status.style.color = 'var(--medical-blue)';
-            status.innerText = 'Inquiry Submitted successfully. Our team will contact you shortly.';
-            submitBtn.innerText = originalText;
-            submitBtn.disabled = false;
+            try {
+                // TODO: Replace this URL with your Google Apps Script Web App URL
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwRIthz__ESfqsSr2cWTfnf6WhtciBcpki5SKCsHUTeVHJWhPtTyoeHpPj4-VaUK0m7yQ/exec';
+                
+
+                // Send data to Google Apps Script
+                await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: new FormData(contactForm)
+                });
+                
+                // Show success state
+                contactForm.reset();
+                status.style.color = 'var(--medical-blue)';
+                status.innerText = 'Inquiry submitted successfully. Our team will contact you shortly.';
+            } catch (error) {
+                console.error('Error:', error);
+                status.style.color = '#FF3B30';
+                status.innerText = error.message === "Please set up the Google Apps Script and paste the URL here." 
+                    ? error.message 
+                    : 'An error occurred while submitting the form. Please try again.';
+            } finally {
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+            }
         });
     }
 });
