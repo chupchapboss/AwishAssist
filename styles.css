@@ -141,12 +141,64 @@ h1, h2, h3, h4, .hero-title, .massive-title, .section-title {
 .video-card h3 { margin-top: 1.5rem; font-size: 1.5rem; }
 
 /* Company & Traction */
+
+/* Founder Cards */
+.founders-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.founder-card { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    gap: 1.5rem; 
+    background: var(--bg-darker); 
+    padding: 2.5rem 1.5rem; 
+    border-radius: var(--radius-lg); 
+    border: 1px solid rgba(0,0,0,0.08); 
+    transition: transform 0.3s;
+    height: 100%;
+}
+.founder-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.founder-photo { 
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 4px solid #FFF; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    flex-shrink: 0; 
+}
+.founder-details h4 { 
+    font-size: 1.25rem; 
+    color: var(--medical-blue); 
+    margin-bottom: 0.25rem; 
+}
+.founder-role { 
+    display: block; 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    color: var(--text-secondary); 
+    margin-bottom: 1rem; 
+}
+.founder-details p { 
+    color: var(--text-primary); 
+    font-size: 0.95rem; 
+    line-height: 1.6; 
+}
+.title-accent-blue {
+    color: var(--medical-blue);
+    border-left: 4px solid var(--medical-blue);
+    padding-left: 1.5rem;
+    text-align: left !important;
+}
+
 .company-section { padding: 8rem 0; background: var(--bg-pure); }
 .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-.founder-block { display: flex; gap: 1.5rem; margin-bottom: 2.5rem; }
-.fb-icon { width: 56px; height: 56px; background: rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--text-primary); flex-shrink: 0; }
-.founder-block h4 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-.founder-block p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
+
+
+
+
 .traction-box { background: var(--bg-panel); border: 1px solid rgba(0,0,0,0.08); padding: 4rem; border-radius: var(--radius-lg); }
 .traction-box h3 { font-size: 2rem; margin-bottom: 2rem; }
 .t-list { display: flex; flex-direction: column; gap: 1.5rem; }
@@ -200,6 +252,7 @@ h1, h2, h3, h4, .hero-title, .massive-title, .section-title {
 }
 
 @media (max-width: 768px) {
+  .founders-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #FFF; padding: 2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-top: 1px solid #EAEAEA; gap: 1.5rem; text-align: center; }
   .nav-links.nav-active { display: flex; }
   .header-actions .btn { display: none; }
